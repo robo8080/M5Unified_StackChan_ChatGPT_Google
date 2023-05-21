@@ -1,4 +1,4 @@
-# M5Unified_StackChan_ChatGPT_Global
+# M5Unified_StackChan_ChatGPT_Google
 Google Cloud Speech to Text を使って音声で会話できるｽﾀｯｸﾁｬﾝです。多言語対応です。
 
 [English](README_en.md)<br>
