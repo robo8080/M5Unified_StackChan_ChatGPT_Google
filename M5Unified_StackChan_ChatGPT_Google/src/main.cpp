@@ -42,7 +42,7 @@ std::deque<String> chatHistory;
 #define WIFI_SSID "SET YOUR WIFI SSID"
 #define WIFI_PASS "SET YOUR WIFI PASS"
 #define OPENAI_APIKEY "SET YOUR OPENAI APIKEY"
-#define VOICETEXT_APIKEY "SET YOUR VOICETEXT APIKEY"
+#define GOOGL_APIKEY "SET YOUR GOOGL APIKEY"
 
 #define USE_SERVO
 #ifdef USE_SERVO
@@ -877,7 +877,7 @@ void setup()
 #ifndef USE_SDCARD
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   OPENAI_API_KEY = String(OPENAI_APIKEY);
-  tts_user = String(VOICETEXT_APIKEY);
+  GOOGLE_API_KEY = String(GOOGL_APIKEY);
 #else
   /// settings
   if (SD.begin(GPIO_NUM_4, SPI, 25000000)) {
