@@ -440,6 +440,7 @@ void handle_apikey_set() {
   uint32_t nvs_handle;
   if (ESP_OK == nvs_open("apikey", NVS_READWRITE, &nvs_handle)) {
     nvs_set_str(nvs_handle, "openai", openai.c_str());
+    nvs_set_str(nvs_handle, "google", google.c_str());
     nvs_close(nvs_handle);
   }
   server.send(200, "text/plain", String("OK"));
