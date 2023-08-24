@@ -194,7 +194,7 @@ String speech_text = "";
 String speech_text_buffer = "";
 //DynamicJsonDocument chat_doc(1024);
 DynamicJsonDocument chat_doc(1024*10);
-String json_ChatString = "{\"model\": \"gpt-3.5-turbo\",\"messages\": [{\"role\": \"user\", \"content\": \"""\"}]}";
+String json_ChatString = "{\"model\": \"gpt-3.5-turbo-0613\",\"messages\": [{\"role\": \"user\", \"content\": \"""\"}]}";
 
 bool init_chat_doc(const char *data)
 {
@@ -1073,6 +1073,7 @@ void setup()
   avatar.setSpeechFont(&fonts::efontJA_16);
   box_servo.setupBox(80, 120, 80, 80);
   box_stt.setupBox(0, 0, M5.Display.width(), 60);
+  randomSeed(millis());
 }
 
 String keywords[] = {"(Neutral)", "(Happy)", "(Sleepy)", "(Doubt)", "(Sad)", "(Angry)"};
@@ -1107,7 +1108,8 @@ String emotion_parms[]= {
   "&emotion_level=4&emotion=sadness",
   "&emotion_level=4&emotion=anger"};
 int tts_emotion_no = 0;
-String random_words[18] = {"あなたは誰","楽しい","怒った","可愛い","悲しい","眠い","ジョークを言って","泣きたい","怒ったぞ","こんにちは","お疲れ様","詩を書いて","疲れた","お腹空いた","嫌いだ","苦しい","俳句を作って","歌をうたって"};
+//String random_words[18] = {"あなたは誰","楽しい","怒った","可愛い","悲しい","眠い","ジョークを言って","泣きたい","怒ったぞ","こんにちは","お疲れ様","詩を書いて","疲れた","お腹空いた","嫌いだ","苦しい","俳句を作って","歌をうたって"};
+String random_words[18] = {"楽しい","お菓子食べたい","あなたは誰","可愛い","悲しい","眠い","ジョークを言って","賢いね","笑い","こんにちは","お疲れ様","詩を書いて","疲れた","お腹空いた","大好き","気持ち良いね","俳句を作って","歌をうたって"};
 int random_time = -1;
 bool random_speak = true;
 
